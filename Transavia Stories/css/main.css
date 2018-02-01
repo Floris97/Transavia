@@ -1,0 +1,666 @@
+/************** Algemeen + Fonts ***************/
+
+@font-face {
+    font-family: "Nexa Bold";
+    src: url("../resources/fonts/Nexa Bold.otf")
+}
+
+@font-face {
+    font-family: "Nexa Light";
+    src: url("../resources/fonts/Nexa Light.otf")
+}
+
+html {
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: "Nexa Light";
+}
+
+a {
+    text-decoration: none;
+}
+
+/****************Navigatie*****************/
+
+nav {
+    position: relative;
+    background-color: white;
+    align-items: center;
+    height: 4em;
+    display: flex;
+    margin: auto;
+    box-shadow: 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
+}
+
+nav ul {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    height: 2rem;
+    margin-right: 1.5rem;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    margin-left: 1.5rem;
+}
+
+nav a {
+    font-size: 1.3rem;
+    font-family: "Nexa Bold";
+    color: #00d66c;
+    text-decoration: none;
+}
+
+nav a:nth-of-type(1) {
+    margin-top: .4rem;
+}
+
+nav a:nth-of-type(2) {
+    margin-left: .5rem;
+}
+
+nav li:nth-of-type(4) {
+    margin-top: .4rem;
+    font-family: "Nexa Bold";
+    color: #00d66c;
+    margin-right: 0.4rem;
+    margin-left: -0.4em;
+}
+
+nav ul li {
+    list-style-type: none;
+    flex-basis: 1.1em;
+}
+
+svg {
+    fill: #00d66c;
+}
+
+svg:hover {
+    fill: #2800a0;
+ }
+
+svg.icon {
+    margin-top: .2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+/*********** bookmark interactie ***********/
+
+.counter {
+    position: absolute;
+    opacity: 0;
+    transition: opacity .5s;
+    width: 1.1em;
+    right: 6em;
+    top: .5em;
+}
+
+.showcounter {
+opacity: 1;
+}
+
+.confirmmessage{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 1.5em;
+    background-color: rgba(0 ,214,108,.90);
+    width: 15em;
+    height: 6em;
+    z-index: 10;
+    border-radius:1.25em;
+    box-shadow: 0 0.8em 1.1em rgba(0, 0, 0, .15);
+    transition: opacity .7s;
+}
+
+.confirmmessage p{
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Nexa Bold";
+    font-size: 1.1em;
+    transition: opacity .7s;
+}
+
+.showconfirmmessage {
+opacity: 1;
+}
+
+.showconfirmmessage p {
+opacity: 1;
+}
+
+/**************** Like Interactie *************/
+
+.reactmessage {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(255 ,50,104,.90);
+    bottom: 8em;
+    width: 13em;
+    height: 3.2em;
+    z-index: 10;
+    border-radius:1em;
+    box-shadow: 0 0.8em 1.1em rgba(0, 0, 0, .15);
+    transition: opacity .5s;
+}
+
+.reactmessage a {
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Nexa Bold";
+    text-decoration: underline;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: opacity .5s;
+}
+
+.showreactmessage {
+opacity: 1;
+}
+
+.showreactmessage a {
+opacity: 1;
+}
+
+/************ Download interactie **************/
+
+.progressbar {
+    opacity: 0;
+    width: 0;
+    background-color: #2800a0;
+    position:absolute;
+    border-radius: 1.25em 1.25em 0 0;
+    transition: width 3s, opacity .01s;
+}
+
+ .showprogress {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 0;
+    border-radius: .75em .75em 0 0;
+}
+
+.progressbar p{
+    opacity: 0;
+    z-index: 100;
+    transition: opacity .5s;
+    color: #ffffff;
+    font-size:0.8em;
+    text-align: center;
+    width: 96%;
+    margin: 0;
+}
+
+.voltooid{
+    opacity: 1 !important;
+}
+
+/****************** Verhaal van de dag ***************/
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Nexa Bold";
+    color: #2800a0;
+}
+
+.pijl1 {
+    position: absolute;
+    margin: auto;
+    width: 110px;
+    left: 0;
+    right: 0;
+}
+
+section div.verhaalvddag {
+    height: 20em;
+    margin: auto;
+    max-width: 20em;
+    width: 90%;
+}
+
+/*************** Styling verhalen algemeen *******************/
+
+article {
+/*    width: 95%;*/
+    padding: 15px;
+    position: relative;
+    top: 4em;
+    margin: auto;
+    border-radius: 1.25em;
+    box-shadow: 0 0.8em 1.1em rgba(0, 0, 0, .15);
+}
+
+article header h3 {
+    font-size: 1.2em;
+    color: white;
+    margin-top: 0.4em;
+    margin-left: 0.5em;
+    margin-bottom: 0.2em;
+}
+
+article img {
+    width: 11px;
+    margin-left: 0.5em;
+            }
+
+article p {
+    margin: 0.5em;
+    width: 80%;
+    color: #ffffff;
+    text-align: left;
+}
+
+section div article div.card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: 1rem;
+    top: 1rem;
+}
+
+section div article div.card img {
+    margin-left: 0;
+}
+
+section div.verhaalvddag article a:hover{
+    color: #ff3268;
+}
+
+section div.verhaalvddag article a {
+    display: inline;
+    color: #2800a0;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 0.3em;
+}
+
+/************* Verhalen icons ***********/
+
+.bookmark {
+    margin-top: 0.2em;
+    margin-bottom: 0.6em;
+    width: 30px;
+    height: 30px;
+}
+
+.download {
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    width: 30px;
+    height: 30px;
+}
+
+.like {
+    margin-top: 0.6em;
+    width: 30px;
+    height: 30px;
+}
+
+section div article div.card p {
+    color: #ff3268;
+    text-align: center;
+    margin-left: 0;
+    padding: 0;
+}
+
+/****************Alle verhalen***********/
+
+section div.alleverhalen article a:hover{
+    color: #ff3268;
+}
+
+/*************** Filters ***************/
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+section button {
+    background: #00d66c;
+    color: white;
+    padding: .4em 2em;
+    font-family: "Nexa Bold";
+    font-size: 1em;
+    border-radius: 2em;
+    border: none;
+    box-shadow: 0px 4px 1px #02c15d;
+    cursor: pointer;
+    margin: 0 1rem
+}
+
+section select{
+    box-shadow: rgb(214, 214, 214) 0px 3px 0px;
+    padding: 0.5em 1em;
+    border-radius: 0.6em;
+    border-width: 0.5px;
+    border-style: solid;
+    background-color: #ffffff;
+    border-color: rgb(209, 209, 209);
+    -webkit-appearance: none;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+/************* sections ****************/
+
+section {
+    background-color: #f3e5d8;
+}
+
+section h1 {
+    background-color: white;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+section div.container {
+    max-width: 70rem;
+    margin: auto;
+}
+
+/************* Grid **************/
+
+section div.container div.alleverhalen {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 2rem;
+    padding-bottom: 8rem;
+}
+
+/********** Verhalen styling appart ***************/
+
+.hongerwinter {
+    background-image: url("../resources/images/hongerwinter-sjabloon.jpg");
+    background-position: center;
+    background-size: cover;
+            }
+
+.twitter {
+    background-image: url("../resources/images/twitter%20Sjabloon.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.haiku {
+    background-image: url("../resources/images/haiku%20Sjabloon.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.twitter header small {
+    margin-left: 0.4em;
+    color: #d3b94c;
+    font-size: 0.9em;
+}
+
+.hongerwinter header small {
+    margin-left: 0.4em;
+    color: #ff3268;
+    font-size: 0.9em;
+}
+
+.haiku header small {
+    margin-left: 0.4em;
+    color: #88b252;
+    font-size: 0.9em;
+}
+
+/*************** Footer ********************/
+
+footer {
+    background-color: #f7f7f7;
+    height: 4em;
+}
+
+footer img {
+    height: 35px;
+    position: absolute;
+    margin-left:2em;
+    margin-top: 1em;
+}
+
+/************Zoeken*********/
+
+.zoeken {
+    position: relative;
+    background-color: #2800a0;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: height .75s, opacity .2s;
+}
+
+.showzoeken {
+    height: 3em;
+    opacity: 1;
+}
+
+.zoeken input {
+    float: right;
+    position: absolute;
+    right: 10%;
+    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../resources/images/zoeken1.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    display: block;
+    margin: auto;
+    border: none;
+    width: 70%;
+    max-width: 30em;
+    padding: .25em;
+    padding-left: 3em;
+    height: 2em;
+    border-radius: .5em;
+    text-decoration: none;
+}
+
+/*******************************************/
+            /* Media querries */
+
+/******************** Navigatie *******************/
+
+@media screen and (max-width: 40em) {
+    nav {
+        position: relative;
+        background-color: white;
+        align-items: center;
+        height: 3.5em;
+        display: flex;
+        margin: auto;
+        box-shadow: 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
+       }
+}
+
+@media screen and (max-width: 40em) {
+    nav ul {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 20em) {
+    nav ul {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        height: 2rem;
+        margin-right: 1rem;
+        background: url("../resources/images/menu.svg")
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .logo {
+        margin-left: 0.5rem;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    nav a {
+        font-size: 1rem;
+        font-family: "Nexa Bold";
+        color: #00d66c;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    svg.icon {
+        margin-top: .2rem;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.5rem;
+    }
+}
+
+/********* Header + Sections ***********/
+
+@media screen and (max-width: 40em) {
+    header h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: "Nexa Bold";
+        color: #2800a0;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    section h1 {
+        background-color: white;
+        margin: 0;
+        padding: 1.3rem 0;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .pijl1 {
+        position: absolute;
+        margin: auto;
+        width: 80px;
+        left: 0;
+        right: 0;
+    }
+}
+
+/*************** Filters ***************/
+
+@media screen and (max-width: 25em) {
+    .filter {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 25em) {
+    section select {
+        margin: 1em 3em;
+        box-shadow: rgb(214, 214, 214) 0px 3px 0px;
+        padding: 0.5em;
+        border-radius: 0.6em;
+        border-width: 0.5px;
+        border-style: solid;
+        background-color: #ffffff;
+        border-color: rgb(209, 209, 209);
+        -webkit-appearance: none;
+        cursor: pointer;
+    }
+}
+
+/*********** Footer **************/
+
+@media screen and (max-width: 20em) {
+   footer {
+        background-color: #f7f7f7;
+        height: 2em;
+    }
+}
+
+@media screen and (max-width: 20em) {
+   footer img {
+    height: 25px;
+    position: absolute;
+    margin-left:1em;
+    margin-top: 1em;
+}
+}
+
+/************** MAJOR Breakpoints grid **************/
+
+@media screen and  (max-width: 40em) {
+   section div.container div.alleverhalen {
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-template-columns: 1fr;
+        margin: 0 2rem;
+        padding-bottom: 8rem;
+    }
+}
+
+    @media screen and (min-width: 35em) and (max-width: 60em) {
+   section div.container div.alleverhalen {
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 2rem;
+        padding-bottom: 8rem;
+    }
+}
+
+@media screen and (min-width: 60em) {
+   section div.container div.alleverhalen {
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 2rem;
+        padding-bottom: 8rem;
+    }
+}

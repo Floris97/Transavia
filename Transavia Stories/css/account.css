@@ -1,0 +1,379 @@
+@font-face {
+    font-family: "Nexa Bold";
+    src: url("../resources/fonts/Nexa Bold.otf")
+}
+
+@font-face {
+    font-family: "Nexa Light";
+    src: url("../resources/fonts/Nexa Light.otf")
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: "Nexa Light";
+}
+
+html {
+    background-color: #f3e5d8;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/****************Navigatie*****************/
+
+nav {
+    position: relative;
+    background-color: white;
+    align-items: center;
+    height: 4em;
+    display: flex;
+    margin: auto;
+    box-shadow: 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
+}
+
+nav ul {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    height: 2rem;
+    margin-right: 1.5rem;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    margin-left: 1.5rem;
+}
+
+nav a {
+    font-size: 1.3rem;
+    font-family: "Nexa Bold";
+    color: #00d66c;
+    text-decoration: none;
+}
+
+nav a:nth-of-type(1) {
+    margin-top: .4rem;
+}
+
+nav a:nth-of-type(2) {
+    margin-left: .5rem;
+}
+
+nav li:nth-of-type(4) {
+    margin-top: .4rem;
+    font-family: "Nexa Bold";
+    color: #00d66c;
+    margin-right: 0.4rem;
+    margin-left: -0.4em;
+}
+
+nav ul li {
+    list-style-type: none;
+    flex-basis: 1.1em;
+}
+
+svg {
+    fill: #00d66c;
+}
+
+svg:hover {
+    fill: #2800a0;
+}
+
+svg.icon {
+    margin-top: .2rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+
+/******** header **********/
+
+header {
+    padding: 4rem 8rem 4rem 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4em;
+}
+
+
+/******** forms algemeen **********/
+
+header form {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background-color: white;
+    display: block;
+}
+
+fieldset {
+    border: none;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #606060;
+    font-family: "Nexa Light";
+}
+
+header form fieldset label {
+    color: #202020;
+    font-family: "Nexa Bold";
+    display: block;
+    margin-top: 1rem;
+}
+
+
+/************** Form aanmelden *****************/
+
+header form.aanmelden fieldset legend {
+    color: #00d66c;
+    font-family: "Nexa Bold";
+    font-size: 1.8em;
+}
+
+header form.aanmelden fieldset input[type='text'] {
+    display: block;
+    height: 1.875rem;
+    background: rgba(247, 247, 247, 0.70);
+    border: 0.063rem solid rgba(62, 142, 65, 0.50);
+    border-radius: 0.3125rem;
+    font-family: "Nexa";
+    padding-left: 0.3125rem;
+    font-size: 1em;
+    width: 100%;
+    max-width: 25em;
+    box-sizing: border-box;
+}
+
+header form.aanmelden fieldset input[type='password'] {
+    display: block;
+    height: 1.875rem;
+    background: rgba(247, 247, 247, 0.70);
+    border: 0.063rem solid rgba(62, 142, 65, 0.50);
+    ;
+    border-radius: 0.3125rem;
+    font-family: "Nexa";
+    padding-left: 0.3125rem;
+    font-size: 1em;
+    width: 100%;
+    max-width: 25em;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+header form.aanmelden fieldset input:last-child {
+    display: block;
+    background: #FF3268;
+    color: white;
+    padding: .3em 3em;
+    font-family: "Nexa Bold";
+    font-size: 1em;
+    border-radius: 1.25em;
+    border: none;
+    box-shadow: 0px 3px 0px #C11B4F;
+    cursor: pointer;
+    margin-top: 0.7em;
+}
+
+input[type='submit']:active {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 0px 3px 0px #C11B4F inset;
+    transform: translateY(2px);
+}
+
+header form.aanmelden fieldset input[type='submit']:active {
+    background-color: #3e8e41;
+    box-shadow: 0px 3px 0px #C11B4F inset;
+    transform: translateY(2px);
+}
+
+
+/********** Form account ********/
+
+header form:nth-child(2) fieldset legend {
+    color: #2800a0;
+    font-family: "Nexa Bold";
+    font-size: 1.6em;
+}
+
+header form.account fieldset input[type='text'] {
+    display: block;
+    height: 1.875rem;
+    background: rgba(247, 247, 247, 0.70);
+    border: 0.063rem solid rgba(56, 41, 129, 0.50);
+    border-radius: 0.3125rem;
+    font-family: "Nexa";
+    padding-left: 0.3125rem;
+    font-size: 1em;
+    width: 100%;
+    max-width: 25em;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+header form.account fieldset input[type='email'] {
+    display: block;
+    height: 1.875rem;
+    background: rgba(247, 247, 247, 0.70);
+    border: 0.063rem solid rgba(56, 41, 129, 0.50);
+    border-radius: 0.3125rem;
+    font-family: "Nexa";
+    padding-left: 0.3125rem;
+    font-size: 1em;
+    width: 100%;
+    max-width: 25em;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+header form.account fieldset input[type='password'] {
+    display: block;
+    height: 1.875rem;
+    background: rgba(247, 247, 247, 0.70);
+    border: 0.063rem solid rgba(56, 41, 129, 0.50);
+    border-radius: 0.3125rem;
+    font-family: "Nexa";
+    padding-left: 0.3125rem;
+    font-size: 1em;
+    width: 100%;
+    max-width: 25em;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+header form.account fieldset input:last-child {
+    display: block;
+    background: #FF3268;
+    color: white;
+    padding: .3em 3em;
+    font-family: "Nexa Bold";
+    font-size: 1em;
+    border-radius: 1.25em;
+    border: none;
+    box-shadow: 0px 3px 0px #C11B4F;
+    cursor: pointer;
+    margin-top: 0.7em;
+}
+
+input[type='submit']:active {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: 0px 3px 0px #C11B4F inset;
+    transform: translateY(2px);
+}
+
+header form.account fieldset input[type='submit']:active {
+    background-color: #3e8e41;
+    box-shadow: 0px 3px 0px #C11B4F inset;
+    transform: translateY(2px);
+}
+
+
+/*******************************************/
+
+
+/* Media querries */
+
+
+/******************** Navigatie *******************/
+
+@media screen and (max-width: 40em) {
+    nav {
+        position: relative;
+        background-color: white;
+        align-items: center;
+        height: 3.5em;
+        display: flex;
+        margin: auto;
+        box-shadow: 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
+    }
+}
+
+@media screen and (max-width: 40em) {
+    nav ul {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 20em) {
+    nav ul {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        height: 2rem;
+        margin-right: 1rem;
+        background: url("../resources/images/menu.svg")
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .logo {
+        margin-left: 0.5rem;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    nav a {
+        font-size: 1rem;
+        font-family: "Nexa Bold";
+        color: #00d66c;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    svg.icon {
+        margin-top: .2rem;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.5rem;
+    }
+}
+
+
+/******** Account form ********/
+
+@media screen and (max-width: 50em) {
+    header form:nth-child(2) fieldset legend {
+        color: #2800a0;
+        font-family: "Nexa Bold";
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 50em) and (max-width: 60em) {
+    header form:nth-child(2) fieldset legend {
+        color: #2800a0;
+        font-family: "Nexa Bold";
+        font-size: 1.2em;
+    }
+}
+
+
+/******************** MAJOR breakpoints grid *******************/
+
+@media screen and (max-width: 40em) {
+    header {
+        padding: 4rem 4rem 4rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 4em;
+    }
+}
